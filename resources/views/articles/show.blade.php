@@ -12,7 +12,20 @@
                      </div>
                 <p><img src="/images/banner.jpg" alt="" class="image image-full" /></p>
 
-             <h2>{{$article->body}}</h2>
+             {{!!$article->body!!}}
+
+                <p
+                    style="margin-top: len">
+                    @foreach($article->tags as $tag)
+                        <a href="/articles?tag={{$tag->name}}">{{$tag->name}}</a>
+                    @endforeach
+
+                </p>
+
+
+
+
+
             </div>
         </div>
      </div>
